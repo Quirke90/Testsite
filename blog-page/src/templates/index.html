@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>Blog Page</title>
     <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
@@ -17,21 +17,22 @@
                 <p>This is where the content of the blog post will go. You can write about various topics here.</p>
             </article>
             <article>
-                <h2>Another Blog Post Title</h2>
+                <h2>Previous Blog Posts</h2>
                 <p>More content for another blog post. Share your thoughts and ideas with your readers.</p>
             </article>
         </section>
         <section id="subscribe">
             <h2>Subscribe to Our Newsletter</h2>
             <form id="subscription-form" action="/subscribe" method="POST">
-                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
             </form>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 My Blog. All rights reserved.</p>
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
     </footer>
-    <script src="../static/js/scripts.js"></script>
+    <script src="/static/js/scripts.js"></script>
 </body>
 </html>
